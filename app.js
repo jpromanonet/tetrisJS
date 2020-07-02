@@ -29,6 +29,6 @@ document.addEventListener('DOMcContentLoaded',() => {
     ]
 
     const oTetromino = [
-        [0,]
+        [0, 1, width, width+1],
     ]
 })
