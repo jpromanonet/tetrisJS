@@ -46,5 +46,6 @@ document.addEventListener("DOMcContentLoaded", () => {
 
   // Randomly select Tetrominos
 
-  let random = Math.floor(Math.random()*theTetrominos.length)
+  let random = Math.floor(Math.random()*theTetrominos.length);
+  let currentRotation = 0;
 });
