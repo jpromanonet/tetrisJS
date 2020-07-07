@@ -43,4 +43,8 @@ document.addEventListener("DOMcContentLoaded", () => {
   ];
 
   const theTetrominos = [lTetromino,zTetromino,tTetromino,oTetromino,iTetromino]
+
+  // Randomly select Tetrominos
+
+  let random = Math.floor(Math.random()*theTetrominos.length)
 });
