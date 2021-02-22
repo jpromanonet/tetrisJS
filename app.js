@@ -3,10 +3,10 @@ document.addEventListener("DOMcContentLoaded", () => {
   // We define the grid size for the game in JS
 
   const grid = document.querySelector;
-  let squares = Array.from(grid.querySelectorAll('div'))
+  let squares = Array.from(grid.querySelectorAll("div"));
   const width = 20;
   const height = 40;
-  let currentPosition = 4
+  let currentPosition = 4;
 
   // The Tetrominos
   const lTetromino = [
@@ -44,14 +44,27 @@ document.addEventListener("DOMcContentLoaded", () => {
     [width, width + 1, width + 2, width + 3],
   ];
 
-  const theTetrominos = [lTetromino,zTetromino,tTetromino,oTetromino,iTetromino]
+  const theTetrominos = [
+    lTetromino,
+    zTetromino,
+    tTetromino,
+    oTetromino,
+    iTetromino,
+  ];
 
   // Randomly select Tetrominos
 
-  let random = Math.floor(Math.random()*theTetrominos.length);
+  let random = Math.floor(Math.random() * theTetrominos.length);
   let currentRotation = 0;
-  let current = theTetrominos[random][currentRotation]
+  let current = theTetrominos[random][currentRotation];
 
-  // Move the tetromino down
+  // First rotation in the first tetromino
 
+  function draw() {
+    current.forEach((index) => {
+      squares[currentPosition + index].classList.add("tetromino");
+    });
+  }
+
+  draw();
 });
