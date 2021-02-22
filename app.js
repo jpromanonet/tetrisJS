@@ -52,10 +52,12 @@ document.addEventListener("DOMcContentLoaded", () => {
     iTetromino,
   ];
 
+  let currentPosition = 4;
+  let currentRotation = 0;
+
   // Randomly select Tetrominos
 
   let random = Math.floor(Math.random() * theTetrominos.length);
-  let currentRotation = 0;
   let current = theTetrominos[random][currentRotation];
 
   // First rotation in the first tetromino
