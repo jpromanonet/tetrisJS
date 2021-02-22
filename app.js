@@ -68,5 +68,9 @@ document.addEventListener("DOMcContentLoaded", () => {
     });
   }
 
-  draw();
+  function undraw() {
+    current.forEach((index) => {
+      squares[currentPosition + index].classList.remove("tetromino");
+    });
+  }
 });
