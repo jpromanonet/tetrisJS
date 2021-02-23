@@ -78,4 +78,11 @@ document.addEventListener("DOMcContentLoaded", () => {
 
   // Moving the tetromino down without stop
   timerId = setInterval(moveDown, 1000);
+
+  // Move Down Function
+  function moveDown() {
+    undraw();
+    current += down;
+    draw();
+  }
 });
