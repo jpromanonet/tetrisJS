@@ -75,4 +75,7 @@ document.addEventListener("DOMcContentLoaded", () => {
       squares[currentPosition + index].classList.remove("tetromino");
     });
   }
+
+  // Moving the tetromino down without stop
+  timerId = setInterval(moveDown, 1000);
 });
