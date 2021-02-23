@@ -2,18 +2,22 @@ document.addEventListener("DOMcContentLoaded", () => {
   // Here goes all your code
   // We define the grid size for the game in JS
 
-  const grid = document.querySelector;
-  let squares = Array.from(grid.querySelectorAll("div"));
-  const width = 20;
-  const height = 40;
-  let currentPosition = 4;
+  const grid = document.querySelector(".grid");
+  let squares = Array.from(document.querySelectorAll(".grid div"));
+  const scoreDisplay = document.querySelector("#score");
+  const startBtn = document.querySelector("#start-button");
+  const width = 10;
+  let nextRandom = 0;
+  let timerId;
+  let score = 0;
+  const colors = ["orange", "red", "purple", "green", "blue"];
 
-  // The Tetrominos
+  //The Tetrominoes
   const lTetromino = [
     [1, width + 1, width * 2 + 1, 2],
     [width, width + 1, width + 2, width * 2 + 2],
     [1, width + 1, width * 2 + 1, width * 2],
-    [width, width * 2, width * 2 + 1, width2 * 2],
+    [width, width * 2, width * 2 + 1, width * 2 + 2],
   ];
 
   const zTetromino = [
@@ -24,7 +28,7 @@ document.addEventListener("DOMcContentLoaded", () => {
   ];
 
   const tTetromino = [
-    [1, width, width + 1, width * 2 + 1],
+    [1, width, width + 1, width + 2],
     [1, width + 1, width + 2, width * 2 + 1],
     [width, width + 1, width + 2, width * 2 + 1],
     [1, width, width + 1, width * 2 + 1],
@@ -44,7 +48,7 @@ document.addEventListener("DOMcContentLoaded", () => {
     [width, width + 1, width + 2, width + 3],
   ];
 
-  const theTetrominos = [
+  const theTetrominoes = [
     lTetromino,
     zTetromino,
     tTetromino,
@@ -55,24 +59,25 @@ document.addEventListener("DOMcContentLoaded", () => {
   let currentPosition = 4;
   let currentRotation = 0;
 
-  // Randomly select Tetrominos
+  console.log(theTetrominoes[0][0]);
 
-  let random = Math.floor(Math.random() * theTetrominos.length);
-  let current = theTetrominos[random][currentRotation];
+  //randomly select a Tetromino and its first rotation
+  let random = Math.floor(Math.random() * theTetrominoes.length);
+  let current = theTetrominoes[random][currentRotation];
 
-  // Draw tetromino
-
+  //draw the Tetromino
   function draw() {
     current.forEach((index) => {
       squares[currentPosition + index].classList.add("tetromino");
+      squares[currentPosition + index].style.backgroundColor = colors[random];
     });
   }
 
-  // Undraw tetromino
-
+  //undraw the Tetromino
   function undraw() {
     current.forEach((index) => {
       squares[currentPosition + index].classList.remove("tetromino");
+      squares[currentPosition + index].style.backgroundColor = "";
     });
   }
 
