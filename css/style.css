@@ -93,5 +93,48 @@ div {
 }
 
 .block {
-    backgroun
+    background-image: url(../images/blue_block.png);
+}
+
+.block2 {
+    background-image: url(../images/purple_block.png);
+}
+
+.block3 {
+    background-image: url(../images/green_block.png);
+}
+
+.block4 {
+    background-image: url(../images/navy_block.png);
+}
+
+.block5 {
+    background-image: url(../images/pink_block.png);
+}
+
+.end {
+    background-color: #d8edea;
+}
+
+.button {
+    position: relative;
+    width: 22rem;
+    height: 2.2rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    line-height: 23px;
+    font-size: 10px;
+    display: block;
+    margin: 30px;
+    text-shadow: -1px -1px 0 #a84155;
+    background: #d25068;
+    border: 1px solid #d25068;
+    width: 12rem;
+    background-image: linear-gradient(to bottom, #f66c7b);
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+        0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #ad4257,
+        0 4px 2px rgba(0, 0, 0, 0.5); 
 }
