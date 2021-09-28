@@ -1,0 +1,97 @@
+:root {
+    font-size: 0.625em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.6rem;
+    margin: auto;
+    max-width: 60rem;
+    color: #d8edea;
+    background: radial-gradient(
+        circle,
+        rgba(175, 196, 174, 1) 0%,
+        rgba(104, 204, 191, 1) 89%,
+        rgba(94, 191, 178, 1) 100%
+    );
+}
+
+header {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+div {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Utility classes */
+
+.t-ucase {
+    text-transform: uppercase;
+}
+
+.t-big {
+    font-size: 1.5em;
+}
+
+.t-wide {
+    letter-spacing: 1.5rem;
+}
+
+.t-close {
+    letter-spacing: 1rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.score-display {
+    font-size: 5rem;
+    color: rgb(133, 121, 107, 0.5);
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    height: 0;
+    width: 300px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 20rem;
+    height: 40rem;
+}
+
+.previous-shape {
+    width: 10rem;
+    padding-left: 2rem;
+    margin-top: -5rem;
+}
+
+.previous-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+    height: 8rem;
+}
+
+.block {
+    backgroun
+}
